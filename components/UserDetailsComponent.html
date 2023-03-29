@@ -38,7 +38,7 @@
   <li>Components</li>
   <li
   >
-  NotfoundComponent</li>
+  UserDetailsComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -64,7 +64,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/notfound/notfound.component.ts</code>
+    <code>src/app/user-details/user-details.component.ts</code>
 </p>
 
 
@@ -89,19 +89,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-notfound</code></td>
+                <td class="col-md-9"><code>app-user-details</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./notfound.component.css</code></td>
+                <td class="col-md-9"><code>./user-details.component.css</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./notfound.component.html</code></td>
+                <td class="col-md-9"><code>./user-details.component.html</code></td>
             </tr>
 
 
@@ -130,32 +130,23 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;app-notfound&#x27;,
-  templateUrl: &#x27;./notfound.component.html&#x27;,
-  styleUrls: [&#x27;./notfound.component.css&#x27;]
+  selector: &#x27;app-user-details&#x27;,
+  templateUrl: &#x27;./user-details.component.html&#x27;,
+  styleUrls: [&#x27;./user-details.component.css&#x27;]
 })
-export class NotfoundComponent {
+export class UserDetailsComponent {
 
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;d-flex align-items-center justify-content-center vh-100&quot;&gt;
-    &lt;div class&#x3D;&quot;text-center&quot;&gt;
-        &lt;h1 class&#x3D;&quot;display-1 fw-bold&quot;&gt;404&lt;/h1&gt;
-        &lt;p class&#x3D;&quot;fs-3&quot;&gt; &lt;span class&#x3D;&quot;text-danger&quot;&gt;Opps!&lt;/span&gt; Page not found.&lt;/p&gt;
-        &lt;p class&#x3D;&quot;lead&quot;&gt;
-            The page you’re looking for doesn’t exist.
-        &lt;/p&gt;
-        &lt;a routerLink&#x3D;&quot;/&quot; class&#x3D;&quot;btn btn-primary&quot;&gt;Go Home&lt;/a&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;app-qoute&gt;&lt;/app-qoute&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./notfound.component.css</code>
+                    <code>./user-details.component.css</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss"></code></pre>
     </div>
@@ -185,10 +176,10 @@ export class NotfoundComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="d-flex align-items-center justify-content-center vh-100">    <div class="text-center">        <h1 class="display-1 fw-bold">404</h1>        <p class="fs-3"> <span class="text-danger">Opps!</span> Page not found.</p>        <p class="lead">            The page you’re looking for doesn’t exist.        </p>        <a routerLink="/" class="btn btn-primary">Go Home</a>    </div></div></div>'
+        var COMPONENT_TEMPLATE = '<div><app-qoute></app-qoute></div>'
     var COMPONENTS = [{'name': 'AboutUsComponent', 'selector': 'app-about-us'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NotfoundComponent', 'selector': 'app-notfound'},{'name': 'QouteComponent', 'selector': 'app-qoute'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'TodoComponent', 'selector': 'app-todo'},{'name': 'TodoDetailsComponent', 'selector': 'app-todo-details'},{'name': 'TodosComponent', 'selector': 'app-todos'},{'name': 'UserAgentComponent', 'selector': 'app-user-agent'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'NotfoundComponent'};
+    var ACTUAL_COMPONENT = {'name': 'UserDetailsComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -234,7 +225,7 @@ export class NotfoundComponent {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'NotfoundComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'UserDetailsComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
