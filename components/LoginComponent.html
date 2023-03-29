@@ -469,8 +469,7 @@ export class LoginComponent {
 
     <div class="tab-pane fade " id="c-templateData">
         <pre class="line-numbers"><code class="language-html">&lt;section class&#x3D;&quot;TDForm&quot;&gt;
-    &lt;form class&#x3D;&quot;m-auto my-5 rounded shadow&quot; #form&#x3D;&quot;ngForm&quot; 
-        (ngSubmit)&#x3D;&quot;login(form)&quot;&gt;
+    &lt;form class&#x3D;&quot;m-auto my-5 rounded shadow&quot; #form&#x3D;&quot;ngForm&quot; (ngSubmit)&#x3D;&quot;login(form)&quot;&gt;
         &lt;div *ngIf&#x3D;&quot;errors&quot; class&#x3D;&quot;alert alert-danger d-flex align-items-center mx-auto mb-2&quot; role&#x3D;&quot;alert&quot;&gt;
             &lt;i class&#x3D;&quot;bi bi-exclamation-circle me-2&quot;&gt;&lt;/i&gt;
             &lt;div&gt;
@@ -493,7 +492,7 @@ export class LoginComponent {
             &lt;/div&gt;
         &lt;/div&gt;
 
-        &lt;button class&#x3D;&quot;btn btn-reg mt-3&quot; type&#x3D;&quot;submit&quot; [disabled]&#x3D;&quot;!form.valid&quot;&gt;login&lt;/button&gt;
+        &lt;button class&#x3D;&quot;btn btn-reg mt-3 p-2 px-5 &quot; type&#x3D;&quot;submit&quot; [disabled]&#x3D;&quot;!form.valid&quot;&gt;Login&lt;/button&gt;
     &lt;/form&gt;
 &lt;/section&gt;</code></pre>
     </div>
@@ -502,46 +501,51 @@ export class LoginComponent {
                 <p class="comment">
                     <code>./login.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">@import url(&#x27;https://fonts.googleapis.com/css2?family&#x3D;Abhaya+Libre:wght@600&amp;display&#x3D;swap&#x27;);
+                <pre class="line-numbers"><code class="language-scss">@import url(&quot;https://fonts.googleapis.com/css2?family&#x3D;Abhaya+Libre:wght@600&amp;display&#x3D;swap&quot;);
 
-form{
-    width: 50%;
-    background-color: #f7eef0;
-    padding: 2rem;
-    height: 100%;
+form {
+  width: 50%;
+  background-color: #f7eef0;
+  padding: 2rem;
+  height: 100%;
 }
 label,
 button {
-    font-size: 1.2rem;
-    font-family: &#x27;Abhaya Libre&#x27;, serif;
+  font-size: 1.2rem;
 }
 
 label {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .not-valid {
-    border: 1px solid red;
+  border: 1px solid red;
 }
 
 .valid {
-    border: 1px solid green;
+  border: 1px solid green;
 }
-.btn-reg{
-    background-color: #ffd147;
-    display: block;
-    margin: auto;
+.btn-reg {
+  background-color: #ffd147;
+  display: block;
+  margin: auto;
+}
+.btn-reg:hover {
+  background-color: #f7c73a;
+  display: block;
+  margin: auto;
 }
 
 @media only screen and (max-width: 600px) {
-    form{
-        width: 75%;
-    }
-}</code></pre>
+  form {
+    width: 75%;
+  }
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -569,7 +573,7 @@ p {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><section class="TDForm">    <form class="m-auto my-5 rounded shadow" #form="ngForm"         (ngSubmit)="login(form)">        <div *ngIf="errors" class="alert alert-danger d-flex align-items-center mx-auto mb-2" role="alert">            <i class="bi bi-exclamation-circle me-2"></i>            <div>                {{errors}} </div>        </div>        <div>            <label for="username">Username</label>            <input class="form-control" [ngClass]="userName.touched ? userName.errors ? \'not-valid\':\'valid\' :\'\'"                name="userName" ngModel #userName="ngModel" type="text" id="username" required>            <div class="mt-2 text-danger" *ngIf="userName.touched && userName.errors?.[\'required\']">                <p><i class="bi bi-exclamation-circle me-2"></i>userName required</p>            </div>        </div>        <div>            <label for="password">Password</label>            <input class="form-control" [ngClass]="password.touched ? password.errors ? \'not-valid\':\'valid\' :\'\'"                name="password" #password="ngModel" ngModel type="password" id="password" required>            <div class="mt-2 text-danger" *ngIf="password.touched && password.errors?.[\'required\']">                <p><i class="bi bi-exclamation-circle me-2"></i>password required</p>            </div>        </div>        <button class="btn btn-reg mt-3" type="submit" [disabled]="!form.valid">login</button>    </form></section></div>'
+        var COMPONENT_TEMPLATE = '<div><section class="TDForm">    <form class="m-auto my-5 rounded shadow" #form="ngForm" (ngSubmit)="login(form)">        <div *ngIf="errors" class="alert alert-danger d-flex align-items-center mx-auto mb-2" role="alert">            <i class="bi bi-exclamation-circle me-2"></i>            <div>                {{errors}} </div>        </div>        <div>            <label for="username">Username</label>            <input class="form-control" [ngClass]="userName.touched ? userName.errors ? \'not-valid\':\'valid\' :\'\'"                name="userName" ngModel #userName="ngModel" type="text" id="username" required>            <div class="mt-2 text-danger" *ngIf="userName.touched && userName.errors?.[\'required\']">                <p><i class="bi bi-exclamation-circle me-2"></i>userName required</p>            </div>        </div>        <div>            <label for="password">Password</label>            <input class="form-control" [ngClass]="password.touched ? password.errors ? \'not-valid\':\'valid\' :\'\'"                name="password" #password="ngModel" ngModel type="password" id="password" required>            <div class="mt-2 text-danger" *ngIf="password.touched && password.errors?.[\'required\']">                <p><i class="bi bi-exclamation-circle me-2"></i>password required</p>            </div>        </div>        <button class="btn btn-reg mt-3 p-2 px-5 " type="submit" [disabled]="!form.valid">Login</button>    </form></section></div>'
     var COMPONENTS = [{'name': 'AboutUsComponent', 'selector': 'app-about-us'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'NotfoundComponent', 'selector': 'app-notfound'},{'name': 'QouteComponent', 'selector': 'app-qoute'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'TodoComponent', 'selector': 'app-todo'},{'name': 'TodoDetailsComponent', 'selector': 'app-todo-details'},{'name': 'TodosComponent', 'selector': 'app-todos'},{'name': 'UserAgentComponent', 'selector': 'app-user-agent'},{'name': 'UserDetailsComponent', 'selector': 'app-user-details'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'LoginComponent'};
